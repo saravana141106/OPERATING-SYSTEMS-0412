@@ -1,0 +1,10 @@
+$ gcc -std=c11 -Wall -Wextra pipe_ipc.c -o pipe_ipc
+$ ./pipe_ipc
+analyser: reading 31
+analyser: reading 33
+analyser: reading 36
+analyser: reading 34
+analyser: reading 41
+analyser: reading 41
+analyser: count=6 average=36.0
+reader: done

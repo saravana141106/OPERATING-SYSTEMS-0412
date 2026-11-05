@@ -1,0 +1,5 @@
+$ gcc -std=c11 -Wall -Wextra -pthread thread_pool.c -o thread_pool
+Workers=1 cameras=64 total=13714286 time=0.390451 sec
+Workers=4 cameras=64 total=13714286 time=0.171010 sec
+Workers=8 cameras=64 total=13714286 time=0.218862 sec
+Workers=16 cameras=64 total=13714286 time=0.202782 sec

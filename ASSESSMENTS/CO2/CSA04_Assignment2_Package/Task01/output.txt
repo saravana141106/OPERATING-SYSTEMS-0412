@@ -1,0 +1,10 @@
+$ gcc -std=c11 -Wall -Wextra fork_process.c -o fork_process
+$ ./fork_process
+Parent process: PID=542
+Child 1: PID=544, PPID=542
+Parent process: PID=542
+Child 2: PID=545, PPID=542
+Parent process: PID=542
+Child 3: PID=546, PPID=542
+Parent process: PID=542
+Parent: all children completed.

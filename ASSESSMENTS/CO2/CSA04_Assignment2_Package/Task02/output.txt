@@ -1,0 +1,51 @@
+$ gcc -std=c11 -Wall -Wextra scheduling.c -o scheduling
+
+FCFS Gantt: | P1 0-5 | P2 5-8 | P3 8-16 | P4 16-22 |
+
+FCFS metrics
+Process  AT  BT  CT  TAT  WT  RT
+P1       0   5   5   5    0   0
+P2       1   3   8   7    4   4
+P3       2   8   16   14    6   6
+P4       3   6   22   19    13   13
+Average WT=5.75, Average TAT=11.25, Average RT=5.75
+
+Non-preemptive SJF Gantt: | P1 0-5 | P2 5-8 | P4 8-14 | P3 14-22 |
+
+SJF metrics
+Process  AT  BT  CT  TAT  WT  RT
+P1       0   5   5   5    0   0
+P2       1   3   8   7    4   4
+P3       2   8   22   20    12   12
+P4       3   6   14   11    5   5
+Average WT=5.25, Average TAT=10.75, Average RT=5.25
+
+SRTF timeline: | P1@0 | P2@1 | P1@4 | P4@8 | P3@14 | end 22
+
+SRTF metrics
+Process  AT  BT  CT  TAT  WT  RT
+P1       0   5   8   8    3   0
+P2       1   3   4   3    0   0
+P3       2   8   22   20    12   12
+P4       3   6   14   11    5   5
+Average WT=5.00, Average TAT=10.50, Average RT=4.25
+
+Non-preemptive Priority (1=highest) Gantt: | P1 0-5 | P2 5-8 | P4 8-14 | P3 14-22 |
+
+Priority metrics
+Process  AT  BT  CT  TAT  WT  RT
+P1       0   5   5   5    0   0
+P2       1   3   8   7    4   4
+P3       2   8   22   20    12   12
+P4       3   6   14   11    5   5
+Average WT=5.25, Average TAT=10.75, Average RT=5.25
+
+Round Robin q=3 Gantt: | P1 0-3 | P2 3-6 | P3 6-9 | P4 9-12 | P1 12-14 | P3 14-17 | P4 17-20 | P3 20-22 |
+
+Round Robin metrics
+Process  AT  BT  CT  TAT  WT  RT
+P1       0   5   14   14    9   0
+P2       1   3   6   5    2   2
+P3       2   8   22   20    12   4
+P4       3   6   20   17    11   6
+Average WT=8.50, Average TAT=14.00, Average RT=3.00
