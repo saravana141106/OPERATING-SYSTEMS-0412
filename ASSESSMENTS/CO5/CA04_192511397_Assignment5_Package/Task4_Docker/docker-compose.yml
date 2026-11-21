@@ -1,0 +1,12 @@
+services:
+  portal:
+    build: .
+    image: result-portal:1.0
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M

@@ -1,0 +1,16 @@
+# Linux inspection commands
+uname -a
+lsb_release -a
+whoami
+pwd
+uptime
+top
+free -h
+vmstat 1 5
+df -h
+du -sh /var/log
+ip addr
+ss -tuln
+ps aux --sort=-%cpu | head
+cat /proc/meminfo | head
+ls -l /
